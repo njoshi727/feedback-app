@@ -1,21 +1,9 @@
-import { useState } from "react"
-
-function FeedbackItem() {
+function FeedbackItem({feedback}) {
   
-  const [rating,setRating] = useState(7)
-  const [feedbackText,setFeedbackText] = useState("This is default feedback text")
-
-  const updateRating = ()=>{
-    setRating((prev)=>{
-        return prev+1
-    })
-  }
-
   return (
     <div className="card">
-        <div className="num-display">{rating}</div>
-        <div className="text-display">{feedbackText}</div>
-        <button onClick={updateRating}> update rating by 1 </button>
+        <div className="num-display">{feedback.rating}</div>
+        <div className="text-display">{feedback.text}</div>
     </div>
   )
 }
