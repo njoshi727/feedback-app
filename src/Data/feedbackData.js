@@ -1,4 +1,4 @@
-const feedbacks = [
+const feedbacksData = [
   {
     id: 1,
     rating: 10,
@@ -16,4 +16,4 @@ const feedbacks = [
   },
 ];
 
-export default feedbacks;
+export default feedbacksData;

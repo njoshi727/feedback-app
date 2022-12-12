@@ -1,17 +1,25 @@
+
 import Header from "./components/Header";
 import FeedbackList from "./components/FeedbackList";
-import feedbacks from "./Data/feedbackData";
+import FeedbackStats from "./components/FeedbackStats";
+import FeedbackForm from "./components/FeedbackForm";
+import { FeedbackProvider } from "./components/context/FeedbackContext";
+import React from "react";
 
-function App(){
+function App() {
 
-    return (
-      <>
-        <Header></Header>
+  return (
+    <React.StrictMode>
+      <FeedbackProvider>
+        <Header />
         <div className='container'>
-          <FeedbackList feedbacks = {feedbacks}></FeedbackList>
+          <FeedbackForm />
+          <FeedbackStats />
+          <FeedbackList />
         </div>
-      </>
-    );
+      </FeedbackProvider>
+    </React.StrictMode>
+  );
 }
 
 export default App;
